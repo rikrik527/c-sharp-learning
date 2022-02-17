@@ -1,0 +1,6 @@
+/Users/rik/Dropbox/雨珊計畫/unity/c sharp/dictionary/dictionary/dictionary/bin/Debug/dictionary.exe
+/Users/rik/Dropbox/雨珊計畫/unity/c sharp/dictionary/dictionary/dictionary/bin/Debug/dictionary.pdb
+/Users/rik/Dropbox/雨珊計畫/unity/c sharp/dictionary/dictionary/dictionary/obj/Debug/dictionary.csproj.AssemblyReference.cache
+/Users/rik/Dropbox/雨珊計畫/unity/c sharp/dictionary/dictionary/dictionary/obj/Debug/dictionary.csproj.CoreCompileInputs.cache
+/Users/rik/Dropbox/雨珊計畫/unity/c sharp/dictionary/dictionary/dictionary/obj/Debug/dictionary.exe
+/Users/rik/Dropbox/雨珊計畫/unity/c sharp/dictionary/dictionary/dictionary/obj/Debug/dictionary.pdb
