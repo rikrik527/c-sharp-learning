@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+
 namespace dictionary
 {
     class Program
@@ -26,6 +28,27 @@ namespace dictionary
             {
                 employeesDic.Add(emp.Role, emp);
             }
+            //update a dictionary key
+            string keyToUpdate = "pm";
+            if (employeesDic.ContainsKey(keyToUpdate))
+            {
+                employeesDic[keyToUpdate] = new Employee(keyToUpdate, "sasa", 21, 18);
+                Console.WriteLine("employee with role/key{0} was updated", keyToUpdate);
+            }
+            else
+            {
+                Console.WriteLine("fuck it no update");
+            }
+
+            //remove
+            string keyToRemove = "Manager";
+            if (employeesDic.Remove(keyToRemove))
+            {
+                Console.WriteLine("employee with role/key {0} was removed", keyToRemove);
+            }
+
+
+
             string key = "ceo";
             if (employeesDic.ContainsKey(key))
             {
@@ -36,7 +59,30 @@ namespace dictionary
             {
                 Console.WriteLine("no employee found with this key {0}", key);
             }
-            
+
+            Employee result = null;
+            //using trygetvalue it returns true if the operation was successful and false otherwise
+            if(employeesDic.TryGetValue("judo", out result))
+            {
+                Console.WriteLine("name {0}", result.Name);
+                Console.WriteLine("role {0}", result.Role);
+                Console.WriteLine("age {0}", result.Age);
+                Console.WriteLine("salary {0}", result.Salary);
+            }
+            for(int i = 0; i< employeesDic.Count; i++)
+            {
+                //using elementat(i) to return the key value pair stored at index i using system.linQ
+                KeyValuePair<string, Employee> keyValuePair = employeesDic.ElementAt(i);
+                //print the key
+                Console.WriteLine("key{0}", keyValuePair.Key);
+                // storing the value in an employee object
+                Employee employeeValue = keyValuePair.Value;
+                //print the properties of the employee object
+                Console.WriteLine("name{0}", employeeValue.Name);
+                Console.WriteLine("role{0}", employeeValue.Role);
+                Console.WriteLine("age{0}", employeeValue.Age);
+                Console.WriteLine("salary{0}", employeeValue.Salary);
+            }
         }
     }
     class Employee
